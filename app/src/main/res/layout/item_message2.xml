@@ -1,0 +1,20 @@
+<!-- res/layout/item_message.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/messageText"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:background="@drawable/rounded_edittext"
+        android:fontFamily="@font/courier_prime"
+        android:padding="25dp"
+        android:text="Saif Said Said"
+        android:textColor="#353030"
+        android:textSize="18sp" />
+
+</LinearLayout>

@@ -1,0 +1,13 @@
+<!-- res/drawable/rounded_textinput_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Set the background color -->
+    <solid android:color="#F2F0F0" /> <!-- Change this to your desired background color -->
+
+    <!-- Set the corner radius -->
+    <corners android:radius="150dp" /> <!-- Adjust the radius as needed -->
+
+    <!-- Optional: Add a border -->
+    <stroke
+        android:width="2dp"
+        android:color="#FFFFFF" /> <!-- Change this to your desired border color -->
+</shape>

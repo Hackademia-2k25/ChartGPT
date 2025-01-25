@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E99285F3"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg2"
+        android:scaleType="centerCrop"
+        android:contentDescription="Background Image" />
+
+    <LinearLayout
+        android:id="@+id/topTextContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="160dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:visibility="visible">
+
+    <!-- First line: "What's on" -->
+    <TextView
+        android:id="@+id/getyour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get your"
+        android:textSize="51sp"
+    android:textColor="#FFFFFF"
+    android:gravity="center"
+    android:fontFamily="@font/poppins_bold"
+        android:alpha="0"
+    android:layout_marginBottom="8dp" />
+    <!-- Second line: "your mind" -->
+        <TextView
+            android:id="@+id/ideas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:text="ideas"
+            android:textColor="#FFFFFF"
+            android:textSize="48sp" />
+        <TextView
+            android:id="@+id/flowing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:text="flowing"
+            android:textColor="#FFFFFF"
+            android:textSize="51sp" />
+</LinearLayout>
+
+    <!-- RecyclerView for chat messages -->
+<androidx.recyclerview.widget.RecyclerView
+android:id="@+id/chatRecyclerView"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_above="@+id/inputLayout"
+android:padding="16dp"
+android:clipToPadding="false"
+android:scrollbars="vertical" />
+
+    <!-- Input layout for typing messages -->
+    <LinearLayout
+        android:id="@+id/inputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="@android:color/transparent"
+        android:elevation="4dp">
+
+        <!-- TextInputLayout and TextInputEditText -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:boxBackgroundMode="none"
+            app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/messageEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cursorVisible="true"
+                android:fontFamily="@font/sora_semibold"
+                android:paddingStart="24dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:hint="Enter Text"
+            android:background="@drawable/rounded_edittext"
+            android:textSize="16sp"
+            android:textColor="#353030" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Send Button -->
+        <ImageButton
+            android:id="@+id/sendButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="4dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Send"
+        android:src="@drawable/ic_send" />
+    </LinearLayout>
+
+    </RelativeLayout>
